@@ -1,0 +1,733 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/* /* Start Variable */
+:root {
+    --main-color: #73c7ee;
+    --padding : 15px;
+  } */
+ /* in general */ 
+  body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+/* Header section */
+
+header{
+    position: absolute;/* perant */
+    left:0;
+    width: 100%;
+    z-index: 2;
+    background-color: black;
+    box-shadow: 0 2px 5px 0 rgb(60, 60, 173);
+    
+}
+header .bg-img{
+    position: relative; /* child the position will depend on the perant(header) */
+    background-image: linear-gradient(rgb(32, 32, 39),rgb(68, 58, 58) ),url(https://someindiangirl.com/wp-content/uploads/2020/01/780-2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header .container1{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* any item from absoult item will be the parent of children  items (so it will not be out of the bord )  */
+    min-height: 97px;
+    background: #01070a;
+    
+}
+
+/* the last element in the header */
+header .container1::after{
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #070505;
+    bottom:0;
+    width: calc(100% -30px); /*it is 15px from right and left*/
+    left: 15px
+}
+header .logo img{
+    height: 40px;
+    margin-left: 30px;
+    border-radius: 9rem;
+}
+header nav{
+    flex: 1; /* this will let the nav take all the remaining area */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.aboutUs {
+    padding-top: 10px;
+    margin-top: 15px;
+}
+
+.aboutUs h2{ 
+  padding-left: 50px;
+}
+.aboutUs > p{
+    padding-top:30px ;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: bold;
+}
+
+@media (min-width: 768px) {
+    header nav .toggle-menu{
+        display: none;
+    }  
+
+    .form-field #reserve{
+      padding-right: 40px;
+    }
+}
+/* means when we hover over the toggle icon the ul beside it will have these properties */
+header nav .toggle-menu:hover + ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left:0;
+    width: 100%;
+    background-color: rgba(248, 244, 244, 0.5);
+}
+header nav ul li a{
+    padding: var(--padding)!important;
+}
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+@media (max-width:767px){
+    header nav ul{
+      display: inline;
+      padding-right: 20px;
+    }
+
+    }
+header nav ul li a {
+    padding: 40px 10px;
+    display: block;
+    color: #998100;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase; 
+    margin-right: 15px;
+}
+/* the a that is active and the a's that we will be hovered  */
+header nav ul li a.cative, header nav ul li a:hover{
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+header nav .form{
+    width: 40px;
+    height: 30px;
+    position: relative;
+    margin-left: 30px;
+    border-left: 1px solid rgb(17, 8, 8);
+
+}
+header nav .form i{
+    color: rgb(252, 245, 245);
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    transition: translateY(-50);
+    right: 0;
+    margin-bottom: 50px;
+}
+a .logo{
+    display: flex ;
+}
+.logo{
+    color: #998100;
+    text-decoration: none;
+   display: grid;
+   grid-template-columns: 10% 20%;
+   grid-column-gap: 70px;
+   
+}
+
+/* Cover Section */
+.cover-content{
+    padding:30px;
+    }
+     .cover{
+        background-image: linear-gradient(rgba(231, 205, 205, 0.8),rgba(206, 198, 198, 0.4)),url(image/background\ copy.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 95vh;
+    }
+      .cover-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       padding-top: 100px; 
+        height: 80vh;
+    }
+     .cover-title {
+        flex: 1;
+        
+    }
+     .cover-title h1{
+       font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+       letter-spacing: 2px;
+       font-size: 2rem;
+       padding-top: 90px ;
+       color: rgb(9, 117, 206);
+    
+    }
+     .cover-title .Mawlana{
+    
+        color: royalblue;
+    }
+     .cover-title p{
+        font-family: fantasy;
+        color: rgb(1, 3, 3);
+        letter-spacing: 2px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+     .cover-button{
+        flex: 1;
+    }
+     .cover-button .btn{
+        background: #567c9b;
+        outline: none;
+        border: 1px solid #fff;
+        color: #fff;
+        width: 180px;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px 0;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+    
+    }
+    #fresh{
+        font-size: 26px;
+        font-weight: 900;
+        font-style: var(--main-color);
+    }
+    
+    #reservation{
+        text-decoration: none;
+        color: rgb(240, 220, 220);
+    }
+    .cover-button .btn a{
+      text-decoration: none;
+      color: #070705;
+
+    }
+    
+    @media screen and (max-width:500px){
+        .cover-content{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    /* Menu Section */
+    section{
+      margin-top: 0px;
+
+    }
+
+  .container{
+        /*  max-width: 1200px; */
+         max-width: 0 auto; /* will horizontaly centered */
+         padding: 2.8rem; /* to creared a sapce among the edges of my page */    
+        /*  margin-top: 40px; */
+     }
+     
+  .menu{
+    font-family: sans-serif;
+    font-size: 14px ; /* on the desktop virsion is "16px"we set it to 14 insead of 16 cuz when we minimaize it to mobil phone will help us  */
+    margin-left: 5px;
+}
+
+.menu-group-heading{
+    padding-bottom: 1em;/* means 1*14(the original size of .menu), we will fixed later to fit the desktop version*/
+    border-bottom: 2px solid #ccc;
+}
+
+.menu-group{
+    display: grid;
+    grid-template-columns: 1fr; /* this mean every div (box) inside .main-group is going to take up one of the total free remaining space, basiclly each coloumn is going to take up the full width of our menu group */
+    gap: 1.5em; /* add space 1.5*16 between menu itms */
+    padding: 1.5em 0;
+  }
+
+  .menu-item{
+      /* margin-top: 60px; */
+      display: flex; /* the text will be beside the the image */
+
+  }
+
+  .menu-item-image{
+      width: 80px;
+      height: 80px; /* because the image will be shrink when we add the paragraph */
+      flex-shrink: 0;
+      /* object-fit: cover; */
+      margin-right: 1.5em;
+  }
+   
+  .menu-item-heading{
+      display:flex;
+      justify-content: space-between;
+      margin: 0; /* to make it aline with the image */
+  }
+
+  p{
+      line-height: 1.6;
+  }
+/* we need to expand the text to take the remaining space that why we going to use flew-grow*/
+  .menu-item-text{
+      flex-grow: 1;
+  }
+
+  .menu-item-name{
+      margin-right: 1.5em;
+  }
+
+  h2{
+      margin-top: 30px;
+      color:darkgreen;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  /* if the screen it larger than 992 we gonna apply desktop style */
+  @media screen and (min-width: 992px) {
+   
+      .menu{
+          font-size: 16px;
+      }
+
+       .menu-group{
+           grid-template-columns: repeat(2, 1fr); /* means 1fr 1fr, which is two columns taking up the total space evenly ()two evenly sized columns*/
+           margin-right: 10px;
+       }
+
+       .menu-item-image{
+          width: 125px;
+          height: 125px;
+      }
+
+      .content{
+          grid-template-columns: repeat(1,1fr); 
+      }
+      .article{
+          text-align: center;
+      }
+  }
+
+/* Menu Section */
+.menu{
+    font-family: sans-serif;
+    font-size: 14px ; /* on the desktop virsion is "16px"we set it to 14 insead of 16 cuz when we minimaize it to mobil phone will help us  */
+}
+
+.menu-group-heading{
+    padding-bottom: 1em;/* means 1*14(the original size of .menu), we will fixed later to fit the desktop version*/
+    border-bottom: 2px solid #ccc;
+    padding: 5px;
+    background-color: #998100;
+    margin-right: 10px;
+}
+
+.menu-group{
+    display: grid;
+    grid-template-columns: 1fr; /* this mean every div (box) inside .main-group is going to take up one of the total free remaining space, basiclly each coloumn is going to take up the full width of our menu group */
+    gap: 1.5em; /* add space 1.5*16 between menu itms */
+    padding:1em 0;
+    margin-top: 0;
+    padding-left: 10px;
+    background-color: khaki;
+  }
+
+  .menu-item{
+      margin-top: 60px;
+      display: flex; /* the text will be beside the the image */
+
+  }
+
+  .menu-item-image{
+      width: 80px;
+      height: 80px; /* because the image will be shrink when we add the paragraph */
+      flex-shrink: 0;
+      /* object-fit: cover; */
+      margin-right: 1.5em;
+      filter: blur(4px);
+  }
+   
+  .menu-item-heading{
+      display:flex;
+      justify-content: space-between;
+      margin: 0; /* to make it aline with the image */
+  }
+
+  p{
+      line-height: 1.6;
+  }
+/* we need to expand the text to take the remaining space that why we going to use flew-grow*/
+  .menu-item-text{
+      flex-grow: 1;
+  }
+
+  .menu-item-name{
+      margin-right: 1.5em;
+  }
+
+  h2{
+      color:darkgreen;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  /* if the screen it larger than 992 we gonna apply desktop style */
+  @media screen and (min-width: 992px) {
+   
+      .menu{
+          font-size: 16px;
+      }
+
+       .menu-group{
+           grid-template-columns: repeat(2, 1fr); /* means 1fr 1fr, which is two columns taking up the total space evenly ()two evenly sized columns*/
+       }
+
+       .menu-item-image{
+          width: 125px;
+          height: 125px;
+      }
+
+      .menu-item-image:hover{filter: blur();}
+      .content{
+          grid-template-columns: repeat(1,1fr); 
+      }
+      .article{
+          text-align: center;
+      }
+  }
+ */
+
+/* Resevation Section */
+.container{
+  background-color: #fafafa;
+  box-shadow: 10px 15px 20px rgb(138, 51, 51);
+  display: grid;
+  grid-template-columns: 40% 60%; /* divide the page into columns 40% to the left and 60% to the right */
+  margin-bottom: 40px;}
+.heading{
+  margin-top: 30px;
+  padding-bottom: 20px;
+  font-size:35px;
+  text-transform: uppercase;
+}
+.container-form{
+  color: #998100;
+  padding-top: 100px ;
+}
+form{
+  display: grid;
+  grid-row-gap: 10px;
+  height: 10%;
+  color: #1da1f2;
+}
+form p{
+  font-weight: 600; 
+  
+}
+.form-field{
+ 
+  display: flex;
+  
+  margin-top: 35px;
+}
+
+.form-field input {
+  
+  
+display: grid;
+grid-template-rows: 10 10 10 0;
+
+width: 40%;
+border: 1px solid black;
+margin-top: 1rem;
+}
+
+
+input,select{
+  padding: 20px 5px;
+  margin-left: 10px; 
+}
+.btn{
+  background-color: #998100;
+  color:#fff;
+  padding: 10px 20px;
+  border: none;
+  font-size: 18px;
+  border-radius: 100px;
+  box-shadow: 7px 10px 12px rgba(0,0,0,.1);
+  cursor: pointer;
+  transition: transform 0.3s;
+  width: 7rem;
+  margin-left:50rem;
+  margin-bottom: 10px;
+}
+heading-yellow{
+color:#998100 ;
+}
+.btn:hover{
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03) ;
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform:scale(1.03);
+  box-shadow: 10px 12px 15px rgba(0,0,0,.1) ;
+}
+.container1{
+  background-color: khaki;
+  
+}
+h2{
+  color: black;
+ margin-right: 15em;
+}
+/*  Footer Section */
+
+.footer {
+    background-color: #030101;
+    padding: 50px 0 0;
+  
+  }
+  ul .social{
+      margin-left: 30px;
+  }
+ #contactUs .footer{
+  height: 40px;
+}
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+    margin-left: 80px;
+  }
+  .footer .box h3 {
+    color: #998100;
+    font-size: 30px;
+    margin: 0 0 20px;
+  }
+  
+  .footer .box .social {
+    display: flex;
+  }
+  .footer .box .social li {
+    margin-right: 10px;
+  }
+  .footer .box .social li a {
+    background-color: #998100;
+    color: black;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    transition: var(--main-transition);
+    padding: 15px ;
+  }
+  .footer .box .social .facebook:hover {
+    background-color: #1877f2;
+  }
+  .footer .box .social .instagram:hover {
+    background-color: #1da1f2;
+  }
+  .footer .box .social .youtube:hover {
+    background-color: #0c0925;
+  }
+  .footer .box .text {
+    line-height: 2;
+    color: #b9b9b9;
+  }
+  .footer .box .links li {
+    padding: 15px 0;
+    transition: var(--main-transition);
+  }
+  .footer .box .links li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+  .footer .box .links li:hover {
+    padding-left: 10px;
+  }
+  .footer .box .links li:hover a {
+    color: white;
+  }
+  .footer .box .links li a {
+    color: #b9b9b9;
+    transition: var(--main-transition);
+  }
+  .footer .box .links li a::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\F101";
+    font-weight: 900;
+    margin-right: 10px;
+    color: var(--main-color);
+  }
+  .footer .box .line {
+    display: flex;
+    align-items: center;
+    color: #b9b9b9;
+    margin-bottom: 30px;
+  }
+  .footer .box .line i {
+    font-size: 25px;
+    color: var(--main-color);
+  /*   margin-right: 10px; */
+  }
+  footer li{
+    list-style-type: none;
+}
+  @media (max-width: 768px) {
+    .footer {
+      text-align: center;
+    }
+    .footer .box .line i {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+    .footer .box .line {
+      flex-direction: column;
+      margin-right: 10px;
+    }
+    .footer .box .social {
+      justify-content: center;
+    }
+  }
+  .footer .box .line .info {
+    line-height: 1.7;
+    flex: 1;
+  }
+  .footer .box .line .info span {
+    display: block;
+  }
+  
+  .footer .copyright {
+    padding: 25px 0;
+    text-align: center;
+    color: #998100;
+    margin: 50px 0 0;
+    border-top: 1px solid #444;
+  }
+
+
+/* Phone view */
+@media  screen and (max-width: 375px) {
+
+  .form-field{font-size: xx-small;
+    margin-right: 40%;}
+
+  header{
+    /* position: relative; */
+    left:0;
+    width: 100%;
+    z-index: 2;
+    background-color: black;
+    box-shadow: 0 2px 5px 0 rgb(60, 60, 173);   
+}
+
+ a{
+  font-size: 12px;
+  padding-right: 0px;
+  
+}
+.cover-button .btn  {
+  background: none;
+  border: none;
+}
+ a #reserveNow{
+  color: red;
+}
+.aboutUs p{
+  font-size:15px;  
+}
+.cover{
+font-size: 12px;
+}
+.cover-title span {
+font-size: 16px;
+}
+.cover-title h1{
+font-size: 16px;
+margin-top: 50rem;
+}
+.cover-title #fresh{
+font-size: 11px;
+margin-top: 30px;
+}
+.footer .box h3{
+  font-size: 30px;
+}
+.footer .container .box  li a{
+font-size: 15px;
+width: 10px;
+height: 10px;
+
+}
+footer{
+  height: 20px;
+  font-size: 15px;
+  text-align: center;
+}
+  .footer .container .box h3{
+    font-size: 25px;
+    text-align: left;
+    margin-top: 90px;
+  }
+  .footer .container .box {
+    text-align:left;
+  }
+   .footer ul.social{
+   justify-content: center;
+   font-size: 10px;
+   text-align: center;
+  }
+div .line{
+float: left;
+}
+div .box{
+  float: left;
+}
+}
+
+
+
